@@ -1,0 +1,5 @@
+@startuml
+Equipo "0..1" o-- "*" Jugador
+
+Biblioteca "0..1" o-- "*" Libro
+@enduml

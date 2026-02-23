@@ -1,0 +1,6 @@
+@startuml
+class Zona {}
+class Almacen {}
+
+Almacen "1" --> "*" Zona
+@enduml

@@ -1,0 +1,15 @@
+@startuml Relacions-01
+
+class Titor
+class Curso
+Titor "1" -- "1" Curso
+
+class Provedor
+class Artigo
+Provedor "1" -- "0..*" Artigo
+
+class ViaxeCompartido
+class Persoa
+ViaxeCompartido "*" -- "*" Persoa
+
+@enduml

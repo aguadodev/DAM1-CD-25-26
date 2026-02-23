@@ -1,0 +1,7 @@
+@startuml 
+class Cliente
+class Factura
+
+Cliente "1" -- "*" Factura
+
+@enduml

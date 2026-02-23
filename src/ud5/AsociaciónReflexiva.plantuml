@@ -1,0 +1,7 @@
+@startuml
+class Empleado {
+    - String nombre
+    - String puesto
+}
+Empleado "0..1 supervisor" -- "0..* supervisado" Empleado: supervisa
+@enduml

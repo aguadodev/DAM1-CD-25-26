@@ -1,0 +1,7 @@
+@startuml
+Casa "1" *-- "1.." Habitacion
+
+Pedido "1" *-- "1.." LiñaPedido
+
+Exame "1" *-- "1.." Pregunta
+@enduml
