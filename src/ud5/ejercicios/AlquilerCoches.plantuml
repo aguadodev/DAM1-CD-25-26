@@ -1,0 +1,54 @@
+@startuml
+
+Cliente "1" -- "*" Cliente : Avala
+
+Cliente "1" -- "*" Reserva
+
+Agencia "1" -right- "*" Reserva
+
+Reserva "1" -right- "*" Coche
+(Reserva, Coche) .. DetalleReserva
+
+Coche "*" -right- "1" Garaje
+
+
+
+class Cliente {
+    cod
+    dni
+    nombre
+    direccion
+    telefono
+}
+
+class Reserva {
+    fechaInicio
+    fechaFin
+    precio
+}
+
+class DetalleReserva {
+    precio
+    litros
+    entregado
+}
+
+class Coche {
+    matricula
+    modelo
+    color
+    marca
+}
+
+class Garaje {
+    cod
+    ubicacion
+    capacidad
+}
+
+class Agencia {
+    nombre
+    direccion
+}
+
+@enduml
