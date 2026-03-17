@@ -1,0 +1,69 @@
+@startuml
+
+class FormularioInscricion <<boundary>> {
+    mostrarFormulario()
+    capturarDatosEquipo()
+}
+
+class XestorCampionato <<control>> {
+    validarInscricion(e: Equipo): boolean
+    xerarCalendario(): void
+}
+
+FormularioInscricion ..> XestorCampionato
+
+XestorCampionato ..> entity
+
+package entity {
+    class Persoa <<entity>> {
+        # DNI
+        # nome
+        # dataNacemento
+    }
+
+    class Xogador <<entity>> {
+        - dorsal
+        - posición
+    }
+
+    class Árbitro <<entity>> {
+        - númeroColexiado
+        - anosExperiencia
+    }
+
+    class Equipo <<entity>> {
+        - nome
+        - corCamiseta
+        - puntuaciónTotal
+    }
+
+    class Partido <<entity>> {
+        - data
+        - hora
+        - pista
+        - resultadoFinal
+    }
+
+    class Estatísticas <<entity>> {
+       puntosAnotados
+       rebotes
+       faltasCometidas 
+    }
+
+    Partido "*" -- "*" Xogador
+    (Xogador, Partido) .. Estatísticas
+
+    Persoa <|-- Xogador
+    Persoa <|-- Árbitro
+
+    Equipo "0..1" o-right- "3..4" Xogador
+
+    Partido "*" -- "1" Equipo: local
+    Partido "*" -left- "1" Equipo: visitante
+
+    Partido "*" -left- "1" Árbitro
+}
+
+
+
+@enduml
