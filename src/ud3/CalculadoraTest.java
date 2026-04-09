@@ -2,31 +2,35 @@ package ud3;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
+    Calculadora c = null;
+
+    @BeforeEach
+    void iniciarCalculadora() {
+        c = new Calculadora(6, 2);
+    }
+
     @Test
     void testDivide() {
-        Calculadora c = new Calculadora(6, 2);
         int resultado = c.divide();
         assertEquals(3, resultado);    }
 
     @Test
     void testMultiplica() {
-        Calculadora c = new Calculadora(2, 3);
         int resultado = c.multiplica();
-        assertEquals(6, resultado);    }
+        assertEquals(12, resultado);    }
 
     @Test
     void testResta() {
-        Calculadora c = new Calculadora(2, 3);
         int resultado = c.resta();
-        assertEquals(-1, resultado);    }
+        assertEquals(4, resultado);    }
 
     @Test
     void testSuma() {
-        Calculadora c = new Calculadora(2, 3);
         int resultado = c.suma();
-        assertEquals(5, resultado);
+        assertEquals(8, resultado);
     }
 }
