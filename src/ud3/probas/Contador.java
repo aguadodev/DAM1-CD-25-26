@@ -1,4 +1,4 @@
-package ud3;
+package ud3.probas;
 public class Contador {
     public static int contarMultiplos(int n, int divisor) {
         int count = 0;

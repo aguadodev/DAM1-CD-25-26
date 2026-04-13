@@ -1,4 +1,4 @@
-package ud3;
+package ud3.probas;
 import java.util.Scanner;
 
 public class Factorial {

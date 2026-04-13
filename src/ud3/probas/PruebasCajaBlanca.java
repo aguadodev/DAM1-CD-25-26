@@ -1,4 +1,4 @@
-package ud3;
+package ud3.probas;
 
 public class PruebasCajaBlanca {
 

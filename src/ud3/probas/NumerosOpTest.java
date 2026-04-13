@@ -1,4 +1,4 @@
-package ud3;
+package ud3.probas;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

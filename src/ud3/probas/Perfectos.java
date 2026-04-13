@@ -1,4 +1,4 @@
-package ud3;
+package ud3.probas;
 public class Perfectos {
     public static int primeiroPerfecto(int n) {
         for (int i = n; i >= 1; i--) {

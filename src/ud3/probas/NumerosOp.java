@@ -1,4 +1,4 @@
-package ud3;
+package ud3.probas;
 public class NumerosOp {
 
     public static int sumaDigitos(int n) {
